@@ -67,19 +67,19 @@ func measure(g geometry) {
 }
 
 func main() {
-	r := &rect{width: 10, height: 4}
-	c := &circle{radius: 9}
-	s := &square{width: 10}
+	r := rect{width: 10, height: 4}
+	c := circle{radius: 9}
+	s := square{width: 10}
 
-	measure(r)
+	measure(&r)
 	r.resize(4)
-	measure(r)
+	measure(&r)
 
-	measure(c)
+	measure(&c)
 	c.resize(10)
-	measure(c)
+	measure(&c)
 
-	measure(s)
+	measure(&s)
 	s.resize(-1)
-	measure(s)
+	measure(&s)
 }
