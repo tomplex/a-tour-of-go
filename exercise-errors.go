@@ -21,8 +21,8 @@ func Sqrt(x float64) (z float64, err error) {
 	if x < 0 {
 		return 0, ErrNegativeSqrt(x)
 	}
-	z = Zi
 
+	z = Zi
 	step := func() float64 {
 		return z - (z*z - x) / (2 * z)
 	}
